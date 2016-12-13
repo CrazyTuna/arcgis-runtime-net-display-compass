@@ -14,3 +14,7 @@ My solution:
     `};
     
 Have fun ;-)
+
+![ArcGIS Runtime .Net SDK Xamarin.Forms Display North Compass](/compass1.PNG?raw=true)
+![ArcGIS Runtime .Net SDK Xamarin.Forms Display North Compass](/compass2.PNG?raw=true)
+
