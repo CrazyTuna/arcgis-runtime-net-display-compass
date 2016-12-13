@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Esri.ArcGISRuntime.Mapping;
+using Xamarin.Forms;
 
 namespace ArcGIS.XamarinForms.Compass
 {
@@ -7,8 +8,11 @@ namespace ArcGIS.XamarinForms.Compass
         public MapPage()
         {
             InitializeComponent();
+            MapView.Map = new Map(Basemap.CreateStreets());
+            MapView.ViewpointChanged += (sender, args) =>
+            {
+                NorthArrow.Rotation = -MapView.MapRotation;
+            };
         }
-
-        // Map initialization logic is contained in MapViewModel.cs
     }
 }

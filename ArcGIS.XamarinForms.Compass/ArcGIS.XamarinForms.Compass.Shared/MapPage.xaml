@@ -2,14 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:esriUI="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
-			 xmlns:shared="clr-namespace:ArcGIS.XamarinForms.Compass.Shared;assembly=ArcGISXamarinFormsCompass"
 			 x:Class="ArcGIS.XamarinForms.Compass.MapPage">
-	<ContentPage.Resources>
-		<ResourceDictionary>
-			<shared:MapViewModel x:Key="MapViewModel" />
-		</ResourceDictionary>
-	</ContentPage.Resources>
-	<Grid>
-		<esriUI:MapView Map="{Binding Map, Source={StaticResource MapViewModel}}" />
-	</Grid>
+  <AbsoluteLayout>
+    <esriUI:MapView x:Name="MapView"
+                    AbsoluteLayout.LayoutBounds="1,1,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+    <AbsoluteLayout
+      AbsoluteLayout.LayoutBounds="1,1,1,1"
+      AbsoluteLayout.LayoutFlags="All"
+      Padding="30">
+      <AbsoluteLayout
+          AbsoluteLayout.LayoutBounds="1,1,AutoSize,AutoSize"
+          AbsoluteLayout.LayoutFlags="PositionProportional">
+        <Image
+          AbsoluteLayout.LayoutBounds="0,0,1,1"
+          AbsoluteLayout.LayoutFlags="All"
+        Aspect="AspectFill"
+        HeightRequest="70"
+        WidthRequest="70"
+        HorizontalOptions="CenterAndExpand"
+        Source="Assets/ic_empty_circle.png"
+        VerticalOptions="CenterAndExpand">
+        </Image>
+        <Image
+          x:Name="NorthArrow"
+          AbsoluteLayout.LayoutBounds="0,0,1,1"
+          AbsoluteLayout.LayoutFlags="All"
+          Aspect="AspectFill"
+          HeightRequest="70"
+          WidthRequest="70"
+          HorizontalOptions="CenterAndExpand"
+          Source="Assets/ic_compass.png"
+          VerticalOptions="CenterAndExpand">
+        </Image>
+      </AbsoluteLayout>
+    </AbsoluteLayout>
+  </AbsoluteLayout>
 </ContentPage>
