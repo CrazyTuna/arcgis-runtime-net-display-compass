@@ -1,5 +1,5 @@
 # arcgis-runtime-net-display-compass
-Display a compass using the ArcGIS Runtime SDK for .Net (Xamarin.Forms)
+Display a compass using the ArcGIS Runtime SDK (Xamarin.Forms) for iOS, Android and UWP app
 
 My solution:
 - Find a compass icon that can rotate (see this [article](https://developer.xamarin.com/guides/xamarin-forms/working-with/images/) to add image resource to Xamarin.Form)
