@@ -1,7 +1,7 @@
 # arcgis-runtime-xamarin-toolkit
 Display a compass and a scale line using the ArcGIS Runtime SDK (Xamarin.Forms) for iOS, Android and UWP app
 
-My solution:
+Compass solution:
 - Find a compass icon that can rotate (see this [article](https://developer.xamarin.com/guides/xamarin-forms/working-with/images/) to add image resource to Xamarin.Form)
 - Add the image on top of the map:
 
